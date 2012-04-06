@@ -25,7 +25,7 @@ $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 		It "gets physical memory details" {
 			$expected = get-wmiobject win32_physicalmemory | sort Name | select-object Name, Capacity, DeviceLocator, Tag
             $actual = get_win32_physicalmemory
-			$actual.Capacity.should.be($expected.Capacity)
+			$actual.Count.should.be($expected.Count)
         }
 
 		It "gets process details" {
