@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>winfo by nickfloyd</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>winfo</h1>
+        <h2>Ever had those customer moments where they say it does not work and you say it works on my box - bottom line it's not working somewhere.  Why add to the frustration of dealing with broken things by adding variables like different configurations, environments and so on.  This project seeks to solve that problem.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/nickfloyd/winfo/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/nickfloyd/winfo/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/nickfloyd/winfo" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h3>winfo.</h3>
+
+<p>The intention of the project is to have some sort of configuration gathering that can gets the system info from one machine that can be used to generate a close to identical match on another machine or virtual.  This is ideal for troubleshooting software in environments not owned by the troubleshooter.  Right now the focus is on the various <strong>windows</strong> server platforms with the intent of extending it later.</p>
+
+<pre><code>$ winfo_collector.ps1 - the core collection configuration logic
+$ run.ps1 - wedge that can be repurposed into a bat or other executable
+$ winfo_collector.Tests.ps1 - BDD tests that support the collector
+</code></pre>
+
+<h3>The idea</h3>
+
+<p>Dealing with issues with installed software is difficult given the billion different configuration possibilities that each server can have. Why not have a script that generates a list of specifics from a source box then sends it to something like a vmware server for generation so that dev / support can reproduce the issue or senario in an environment that closely matches the remote.</p>
+
+<h3>Tech</h3>
+
+<ul>
+<li>powershell</li>
+<li>chef</li>
+<li>vmware</li>
+</ul><h3>Testing</h3>
+
+<p>Using <a href="https://github.com/scottmuc/Pester">Pester</a> (requires PsGet) for BDD. <strong>Install</strong> by opening up a powershell command window:  </p>
+
+<pre><code>Nick&gt; (new-object Net.WebClient).DownloadString("<a href="http://bit.ly/GetPsGet&quot;">http://bit.ly/GetPsGet"</a>) | iex
+Nick&gt; import-module PsGet
+Nick&gt; install-module Pester
+Nick&gt; import-module Pester
+Nick&gt; Get-Module
+</code></pre>
+
+<p><strong>Run</strong> by:  </p>
+
+<pre><code>Nick&gt; Invoke-Pester
+</code></pre>
+
+<h3>Authors and Contributors</h3>
+
+<p><a href="https://github.com/nickfloyd" class="user-mention">@nickfloyd</a></p>
+      </section>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-30319034-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
