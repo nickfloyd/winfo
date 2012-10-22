@@ -1,4 +1,4 @@
-#ignore thumbnails created by windows
+#ignore thumbnails created by windows and other files
 Thumbs.db
 .DS_Store
 *.testsettings
